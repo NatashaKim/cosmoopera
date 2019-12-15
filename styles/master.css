@@ -1,0 +1,270 @@
+@import "reset.css";
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/Circe-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nolde";
+  src: url("../fonts/Nolde.woff") format("woff");
+}
+
+:root {
+  --main-color: #FFE0AF;
+}
+
+body {
+  font-family: "Circe";
+  color: var(--main-color);
+  background-repeat: no-repeat;
+  background-color: black;
+  background-image: url(../img/iphone_se.png);
+  background-size: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.main {
+  position: relative;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/*
+  Section first_half
+*/
+
+.first_half img:first-child {
+  width: 134vw;
+  position: absolute;
+  top: -2vw;
+  left: -2vw;
+}
+
+.first_half img:nth-child(2) {
+  position: absolute;
+  width: 141vw;
+  top: -8vw;
+  left: 6vw;
+  transform: rotate(9deg);
+}
+
+.first_half img:nth-child(3) {
+  display: none;
+}
+
+.first_half img:nth-child(4) {
+  width: 166vw;
+  position: absolute;
+  top: -2vw;
+  left: -3vw;
+}
+
+.first_half p,
+.second_half p {
+  width: 51vw;
+  font-size: 4.4vw;
+  line-height: 5.7vw;
+  position: absolute;
+  letter-spacing: 0.1vw;
+  left: 43vw;
+}
+
+.first_half p {
+  top: 101vw;
+}
+
+/*
+  Section center
+*/
+
+.center img:first-child {
+  width: 100.5vw;
+  position: absolute;
+  top: 123.6vw;
+  left: 1.4vw;
+}
+
+.center img:nth-child(2) {
+  display: none;
+}
+
+.center img:nth-child(3) {
+  width: 55vw;
+  position: absolute;
+  top: 190.5vw;
+  left: 19vw;
+}
+
+.center img:nth-child(4) {
+  display: none;
+}
+
+
+.info {
+  display: none;
+  position: absolute;
+  width: 54vw;
+  text-align: center;
+  color: var(--main-color)
+}
+
+.btm_1,
+.btm_2,
+.btm_3,
+.btm_4 {
+  position: absolute;
+  width: 36vw;
+  height: 12vw;
+  color: black;
+}
+
+.btm_content {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  vertical-align: center;
+  font-family: Nolde;
+  font-size: 8vw;
+  line-height: 9vw;
+  width: 14vw;
+  height: 10vw;
+  display: block;
+}
+
+.center h1 {
+  font-family: "Nolde";
+  font-size: 6vw;
+  letter-spacing: 0.1vw;
+}
+
+.center p {
+  font-size: 4vw;
+  letter-spacing: 0.1vw;
+  line-height: 6vw;
+  margin-top: 7vw;
+}
+
+.btm_1:hover,
+.btm_2:hover,
+.btm_3:hover,
+.btm_4:hover .btm_content {
+  color: var(--main-color);
+}
+
+
+/* btm_1 */
+
+.btm_1 {
+  top: 178vw;
+  left: 39vw;
+  transform: rotate(10deg);
+}
+
+.btm_1 .btm_content {
+  top: 0.5vw;
+  left: 10vw;
+  transform: rotate(-10deg);
+}
+
+.btm_1:hover .info {
+  display: block;
+  transform: rotate(-10deg);
+  left: -9vw;
+  top: 29.3vw;
+}
+
+/* btm_2 */
+
+.btm_2{
+  top: 189vw;
+  left: 5vw;
+  transform: rotate(-45deg);
+}
+
+.btm_2 .btm_content {
+  top: 1vw;
+  left: 12vw;
+  transform: rotate(45deg);
+}
+
+.btm_2:hover .info {
+  display:block;
+  transform: rotate(45deg);
+  top: 30.5vw;
+  left: -6.2vw;
+}
+
+/* btm_3 */
+
+.btm_3{
+  top: 220vw;
+  left: -6vw;
+  transform: rotate(87deg);
+}
+
+.btm_3 .btm_content {
+  top: 1vw;
+  left: 12vw;
+  transform: rotate(-87deg);
+}
+
+.btm_3:hover .info {
+  display:block;
+  transform: rotate(-87deg);
+  top: -48vw;
+  left: -10.6vw;
+}
+
+/* btm_4 */
+
+.btm_4{
+  top: 250vw;
+  left: 13vw;
+  transform: rotate(32deg);
+}
+
+.btm_4 .btm_content {
+  top: 2vw;
+  left: 11vw;
+  transform: rotate(-32deg);
+}
+
+.btm_4:hover .info {
+  display:block;
+  transform: rotate(-32deg);
+  top: -47.4vw;
+  left: -12.5vw;
+}
+
+
+
+
+    /*
+      Section second_half
+    */
+
+    .second_half img:first-child {
+      position: absolute;
+      left: -24vw;
+      width: 160vw;
+      top: 279vw;
+      transform: scaleY(1.3) rotate(-8deg);
+      z-index: -1;
+    }
+
+    .second_half p {
+      top: 358vw;
+      width: 54vw;
+    }
