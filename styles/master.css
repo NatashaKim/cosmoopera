@@ -28,6 +28,7 @@ body {
 .main {
   position: relative;
   overflow-x: hidden;
+  height: 560vw;
 }
 
 * {
@@ -39,6 +40,36 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+@media (min-width: 375px) {
+  .main {
+    height: 540vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    height: 390vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    height: 240vw;
+  }
+}
+
+@media (min-width: 1366px) {
+  .main {
+    height: 215vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    height: 205vw;
+  }
 }
 
 
@@ -182,7 +213,7 @@ em {
   .first_half p,
   .second_half p {
     width: 38vw;
-    font-size: 2.3vw;
+    font-size: 2.2vw;
     line-height: 3vw;
     left: 57.5vw;
   }
@@ -642,6 +673,26 @@ em {
     pointer-events: none;
   }
 
+  .btm_1:hover .info {
+    top: 0;
+    left: 0;
+  }
+
+  .btm_2:hover .info {
+    top: 0;
+    left: 0;
+  }
+
+  .btm_3:hover .info {
+    top: 0;
+    left: 0;
+  }
+
+  .btm_4:hover .info {
+    top: 0;
+    left: 0;
+  }
+
   .center img:first-child {
     display: none;
   }
@@ -869,13 +920,13 @@ em {
 
 @media (min-width: 375px) {
   .second_half img:first-child {
-    left: -18vw;
+    left: -12vw;
     width: 141vw;
-    top: 271vw;
+    top: 272vw;
   }
 
   .second_half p {
-    top: 337vw;
+    top: 342vw;
     width: 53vw;
   }
 }
@@ -885,8 +936,8 @@ em {
   .second_half img:first-child {
     left: -1vw;
     width: 127vw;
-    top: 209vw;
-    transform: scaleY(1.15) rotate(-11deg);
+    top: 206vw;
+    transform: skew(9deg) scaleY(1.15) rotate(-11deg);
   }
 
   .second_half p {
@@ -897,15 +948,15 @@ em {
 
 @media (min-width: 1024px) {
   .second_half img:first-child {
-    left: 20vw;
-    width: 85vw;
-    top: 120vw;
-    transform: scaleY(1.15) rotate(2deg);
+    left: 23vw;
+    width: 88vw;
+    top: 118vw;
+    transform: skew(8deg) scaleY(1.05) rotate(2deg);
   }
 
   .second_half p {
-    top: 159.5vw;
-    width: 40vw;
+    top: 161.5vw;
+    width: 39vw;
   }
 }
 
@@ -960,10 +1011,8 @@ em {
 
 .calendar {
   width: 100vw;
-  /* margin-top: 23vw; */
-  /* position: absolute;
-  top: 400vw; */
-  margin-top: 466vw;
+  position: absolute;
+  top: 470vw;
   padding: 0 3vw
 }
 
@@ -1039,7 +1088,7 @@ a:hover .afisha img {
   width: 80vw;
   position: absolute;
   left: 7vw;
-  top: 450vw;
+  top: -16vw;
 }
 
 .space_holder {
@@ -1049,7 +1098,7 @@ a:hover .afisha img {
 @media (min-width: 375px) {
 
   .calendar {
-    margin-top: 439vw;
+    top: 450vw;
     padding: 0 7vw
   }
 
@@ -1081,7 +1130,7 @@ a:hover .afisha img {
   a:hover .afisha img {
     width: 78vw;
     left: 7vw;
-    top: 423vw;
+    top: -20vw;
   }
 
 }
@@ -1089,7 +1138,7 @@ a:hover .afisha img {
 @media (min-width: 768px) {
 
   .calendar {
-    margin-top: 343vw;
+    top: 350vw;
     padding: 0 2.5vw;
   }
 
@@ -1122,13 +1171,13 @@ a:hover .afisha img {
   a:hover .afisha img {
     width: 40vw;
     left: 25vw;
-    top: 335vw;
+    top: -15vw;
   }
 }
 
 @media (min-width: 1024px) {
   .calendar {
-    margin-top: 208.5vw;
+    top: 205vw;
     padding: 0 4.2vw;
   }
 
@@ -1139,7 +1188,7 @@ a:hover .afisha img {
   a:hover .afisha img {
     width: 31vw;
     left: 31vw;
-    top: 202vw;
+    top: -7vw;
   }
 }
 
@@ -1150,7 +1199,7 @@ a:hover .afisha img {
   }
 
   .calendar {
-    margin-top: 198vw;
+    top: 198vw;
     padding: 0 0.6vw;
   }
 
@@ -1205,13 +1254,13 @@ a:hover .afisha img {
   a:hover .afisha img {
     width: 30vw;
     left: 25vw;
-    top: 185vw;
+    top: -10vw;
   }
 }
 
 @media (min-width: 1440px) {
   .calendar {
-    margin-top: 190vw;
+    top: 190vw;
     padding: 0 2.8vw;
   }
 }
