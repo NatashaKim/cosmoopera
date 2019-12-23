@@ -55,9 +55,9 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 2px;
-  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
-  filter: drop-shadow(0 0 6px #699bff);
+  height: 0.2vw;
+  background: linear-gradient(-45deg, var(--main-color), rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 2vw #699bff);
   animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 
@@ -66,8 +66,8 @@ a {
   content: '';
   top: calc(50% - 1px);
   right: 0;
-  height: 2px;
-  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
+  height: 0.2vw;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), var(--main-color), rgba(0, 0, 255, 0));
   border-radius: 100%;
   transform: translateX(50%) rotateZ(45deg);
   animation: shining1 3000ms ease-in-out infinite;
@@ -1192,7 +1192,7 @@ a,
 }
 
 
-.afisha img{
+.afisha {
   display: none;
   width: 10vw;
 }
@@ -1457,7 +1457,7 @@ a:hover .afisha {
   }
 
   30% {
-    width: 100px;
+    width: 30vw;
   }
 
   100% {
@@ -1479,13 +1479,13 @@ a:hover .afisha {
 
 @keyframes shining1 {
   0% {
-    width: 0;
+    width: 0vw;
   }
   50% {
-    width: 30px;
+    width: 6vw;
   }
   100% {
-    width: 0;
+    width: 0vw;
   }
 }
 
