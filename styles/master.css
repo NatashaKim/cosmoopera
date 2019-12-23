@@ -70,7 +70,7 @@ a {
   background: linear-gradient(-45deg, rgba(0, 0, 255, 0), var(--main-color), rgba(0, 0, 255, 0));
   border-radius: 100%;
   transform: translateX(50%) rotateZ(45deg);
-  animation: shining1 3000ms ease-in-out infinite;
+  animation: shining 3000ms ease-in-out infinite;
 }
 
 .star::after {
@@ -180,7 +180,7 @@ a {
   }
 
   .star::before, .star::after {
-    animation: shining1 6000ms ease-in-out infinite;
+    animation: shining 6000ms ease-in-out infinite;
   }
 
 }
@@ -431,7 +431,7 @@ em {
   position: absolute;
   top: 123.6vw;
   left: 1.4vw;
-  animation: shining 3000ms ease-in-out infinite;
+  animation: blinking 6000ms ease-in-out infinite;
 }
 
 .center img:nth-child(2) {
@@ -851,6 +851,7 @@ em {
     width: 67.5vw;
     top: 90.5vw;
     left: 33.7vw;
+    animation: blinking 6000ms ease-in-out infinite;
   }
 
   .center img:nth-child(3) {
@@ -1465,19 +1466,29 @@ a:hover .afisha {
   }
 }
 
-@keyframes shining {
+@keyframes blinking {
   0% {
     filter: drop-shadow(0 0 0);
   }
-  50% {
-    filter: drop-shadow(0 0 1vw);
+
+  30% {
+    filter: drop-shadow(0 0 0);
   }
+
+  50% {
+    filter: drop-shadow(0 0 1.5vw);
+  }
+
+  70% {
+    filter: drop-shadow(0 0 0);
+  }
+
   100% {
     filter: drop-shadow(0 0 0);
   }
 }
 
-@keyframes shining1 {
+@keyframes shining {
   0% {
     width: 0vw;
   }
