@@ -42,6 +42,88 @@ a {
   color: black;
 }
 
+.sky-container {
+  transform: rotateZ(45deg) translateX(-70%);
+  position: absolute;
+  top: 231vw;
+  left: 50%;
+  width: 170vw;
+  height: 170vw;
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px #699bff);
+  animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+}
+
+.star::before, .star::after {
+  position: absolute;
+  content: '';
+  top: calc(50% - 1px);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
+  border-radius: 100%;
+  transform: translateX(50%) rotateZ(45deg);
+  animation: shining1 3000ms ease-in-out infinite;
+}
+
+.star::after {
+  transform: translateX(50%) rotateZ(-45deg);
+}
+
+.star:nth-child(1) {
+  top: 0%;
+  left: 0%;;
+  animation-delay: 650ms;
+}
+.star:nth-child(1)::before, .star:nth-child(1)::after {
+  animation-delay: 650ms;
+}
+
+.star:nth-child(2) {
+  top: 25%;
+  left: 10%;;
+  animation-delay: 150ms;
+}
+.star:nth-child(2)::before, .star:nth-child(2)::after {
+  animation-delay: 150ms;
+}
+
+.star:nth-child(3) {
+  top: 50%;
+  left: 0%;
+  animation-delay: 1600ms;
+}
+.star:nth-child(3)::before, .star:nth-child(3)::after {
+  animation-delay: 1600ms;
+}
+
+.star:nth-child(4) {
+  top: 75%;
+  left: 25%;
+  animation-delay: 4700ms;
+}
+.star:nth-child(4)::before, .star:nth-child(4)::after {
+  animation-delay: 4700ms;
+}
+
+.star:nth-child(5) {
+  top: 100%;
+  left: 50%;
+  animation-delay: 2100ms;
+}
+.star:nth-child(5)::before, .star:nth-child(5)::after {
+  animation-delay: 2100ms;
+}
+
+
+
 @media (min-width: 375px) {
   .main {
     height: 540vw;
@@ -52,11 +134,25 @@ a {
   .main {
     height: 390vw;
   }
+
+  .sky-container{
+    top: 185vw;
+    left: 50%;
+    width: 160vw;
+    height: 160vw;
+  }
 }
 
 @media (min-width: 1024px) {
   .main {
     height: 240vw;
+  }
+
+  .sky-container {
+    top: 115vw;
+    left: 50%;
+    width: 100vw;
+    height: 100vw;
   }
 }
 
@@ -64,12 +160,29 @@ a {
   .main {
     height: 215vw;
   }
+
+  .sky-container {
+      top: 105vw;
+      left: 50%;
+      width: 90vw;
+      height: 90vw;
+  }
+
 }
 
 @media (min-width: 1440px) {
   .main {
     height: 205vw;
   }
+
+  .star {
+    animation: tail 6000ms ease-in-out infinite, shooting 6000ms ease-in-out infinite;
+  }
+
+  .star::before, .star::after {
+    animation: shining1 6000ms ease-in-out infinite;
+  }
+
 }
 
 
@@ -318,6 +431,7 @@ em {
   position: absolute;
   top: 123.6vw;
   left: 1.4vw;
+  animation: shining 3000ms ease-in-out infinite;
 }
 
 .center img:nth-child(2) {
@@ -330,6 +444,7 @@ em {
   top: 190.5vw;
   left: 19vw;
   z-index: 1;
+  border-radius: 50% 0% 0% 0%;
 }
 
 .center img:nth-child(4) {
@@ -1061,6 +1176,10 @@ ul {
   justify-content: space-between;
 }
 
+.space_holder {
+  opacity: 0%;
+}
+
 a,
 .empty {
   display: block;
@@ -1116,16 +1235,44 @@ box-shadow: 0 0 3vw 0.7vw var(--accent-color);
 box-shadow: 0 0 3vw 0.5vw var(--main-color);
 }
 
-a:hover .afisha img {
-  display: block;
+a:hover .afisha {
+  font-size: 2vw;
+  color: var(--main-color);
   width: 80vw;
+  height: 25vw;
   position: absolute;
-  left: 7vw;
-  top: -16vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20vw;
+  display: flex;
+  border: 1vw solid var(--accent-color);
+  border-radius: 7vw;
 }
 
-.space_holder {
-  opacity: 0%;
+.time {
+  width: 30%;
+  text-align: right;
+  padding-right: 2vw;
+}
+
+.time span:first-child {
+  font-family: "Nolde";
+  font-size: 14vw;
+  line-height: 16vw;
+  height: 60%;
+}
+
+.time span:nth-child(2) {
+  font-size: 4vw;
+}
+
+.performance {
+  width: 70%;
+  text-align: left;
+}
+
+.performance h2 {
+
 }
 
 @media (min-width: 375px) {
@@ -1295,5 +1442,58 @@ a:hover .afisha img {
   .calendar {
     top: 190vw;
     padding: 0 2.8vw;
+  }
+}
+
+
+
+
+
+
+/* Animations */
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+
+  30% {
+    width: 100px;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shining {
+  0% {
+    filter: drop-shadow(0 0 0);
+  }
+  50% {
+    filter: drop-shadow(0 0 1vw);
+  }
+  100% {
+    filter: drop-shadow(0 0 0);
+  }
+}
+
+@keyframes shining1 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 30px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(80vw);
   }
 }
